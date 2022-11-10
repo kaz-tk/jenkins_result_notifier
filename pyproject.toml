@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "jenkins-result-notifier"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "jenkins_result_notifier", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+datadog = "^0.44.0"
+dependency-injector = "^4.40.0"
+datadog-api-client = "^2.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+jenkins_result_notifier = "jenkins_result_notifier.scripts.main:main"
