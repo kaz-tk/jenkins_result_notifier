@@ -7,5 +7,8 @@ class MetricsService:
         self.api_client = api_client
         pass
 
-    def notify(self):
+    def gauge(self):
+        raise NotImplementedError()
+
+    def event(self):
         raise NotImplementedError()
